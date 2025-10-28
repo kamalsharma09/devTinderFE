@@ -18,7 +18,7 @@ const NavBar = () => {
           navigate("/login");
         } 
       } catch(err) {
-        console.log(err)
+        console.error(err)
       }
   }
 
@@ -48,6 +48,16 @@ const NavBar = () => {
           <Link to="/profile" className="justify-between">
             Profile
             <span className="badge">New</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/connections" className="justify-between">
+            Friends
+          </Link>
+        </li>
+        <li>
+          <Link to="/connectionRequests" className="justify-between">
+            Requests
           </Link>
         </li>
         <li><a>Settings</a></li>

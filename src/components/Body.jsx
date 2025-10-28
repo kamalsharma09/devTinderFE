@@ -15,7 +15,6 @@ const Body = () => {
         try{
             const res = await axios.get(`${BASE_URL}/profile/view`, { withCredentials: true });
             dispatch(addUser(res.data.data));
-            console.log(res);
         } catch (err) {
             if(err.status === 401) {
                 navigator("/login");
