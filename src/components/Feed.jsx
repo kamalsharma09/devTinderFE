@@ -24,10 +24,12 @@ const Feed = () => {
         handleFeedAPI();
     }, []);
 
+    if(feed?.length <= 0) return <h1 className="text-center text-3xl my-5">No new user avialable !!</h1>
+
     return (
         <>
             <div className="flex justify-center my-5">
-            {feed && <UserCard feed={feed[0]} />}
+            {feed?.length && <UserCard feed={feed[0]} />}
             </div>
         </>
     );
