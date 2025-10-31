@@ -63,7 +63,7 @@ const Login = () => {
                   <input
                     type="text"
                     value={firstName}
-                    className="input input-bordered w-full max-w-xs"
+                    className="input input-bordered w-full max-w-xs mb-3"
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                 </label>
@@ -74,7 +74,7 @@ const Login = () => {
                   <input
                     type="text"
                     value={lastName}
-                    className="input input-bordered w-full max-w-xs"
+                    className="input input-bordered w-full max-w-xs mb-3"
                     onChange={(e) => setLastName(e.target.value)}
                   />
                 </label>
@@ -87,7 +87,7 @@ const Login = () => {
               <input
                 type="text"
                 value={emailId}
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs mb-3"
                 onChange={(e) => setEmailId(e.target.value)}
               />
             </label>
@@ -98,7 +98,7 @@ const Login = () => {
               <input
                 type="password"
                 value={password}
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs mb-3"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </label>
