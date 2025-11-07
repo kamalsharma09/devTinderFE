@@ -3,6 +3,7 @@ import axios from "axios";
 import BASE_URL from "../utils/const";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../store/connectionsSlice";
+import { Link } from "react-router-dom";
 
 const Connections = () => {
   const connections = useSelector((state) => state.connections);
@@ -40,6 +41,7 @@ const Connections = () => {
                 <div>
                   <img className="w-20 h-20 rounded-full" src={photoURL} />
                 </div>
+                <div className="flex justify-between items-center w-full">
                 <div className="text-left mx-4">
                   <h2 className="font-bold text-xl">
                     {firstName + " " + lastName}
@@ -47,6 +49,10 @@ const Connections = () => {
                   {age && gender && `${age}, ${gender}`}
                   <p>{about}</p>
                 </div>
+                <Link to={`/chat/${_id}`}>
+                <button className="btn btn-primary">Chat</button>
+                </Link>
+              </div>
               </div>
             );
           })}
